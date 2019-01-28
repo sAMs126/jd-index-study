@@ -1,0 +1,518 @@
+/*
+ * @Author: liziguang 
+ * @Date: 2019-01-24 21:13:02 
+ * @Last Modified by: liziguang
+ * @Last Modified time: 2019-01-24 22:39:52
+ * @Description: 基础样式
+ */
+
+/* CSS书写顺序
+1.位置属性(position, top, right, z-index, display, float等)
+2.大小(width, height, padding, margin)
+3.文字系列(font, line-height, letter-spacing, color- text-align等)
+4.背景(background, border等)
+5.其他(animation, transition等) */
+
+/* 版心 */
+.w{
+    width: 1190px;
+    margin: auto;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.style-red{
+    /* 页面主色调 防止优先级不够,使用important关键字*/
+    color: #f10215!important;
+}
+/* 清除浮动 */
+.clearfix:before, .clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+li{
+    list-style: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f6f6f6;
+}
+input, button{
+    /* 清除自身的内外边距 */
+    padding: 0;
+    /* 清除自身的内外边框 */
+    border: 0;
+}
+h1, h5, p, dl, dt, dd{
+    /* 清除h1自身的外边距 */
+    margin: 0;
+}
+ol{
+    padding: 0;
+}
+img{
+    /* 去除图片底部缝隙 图片和文字基线对齐*/
+    vertical-align: top;
+}
+a{
+    text-decoration: none;
+}
+/* 引入字体图标 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?8y71mv');
+    src:  url('../fonts/icomoon.eot?8y71mv#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?8y71mv') format('truetype'),
+      url('../fonts/icomoon.woff?8y71mv') format('woff'),
+      url('../fonts/icomoon.svg?8y71mv#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 顶部 start */
+/* 1. 通栏广告 */
+.J_event{
+    /* 子集元素已经有高,会撑开父级元素,不需要再给父级元素规定高
+    height: 80px; */
+    background-color: #000;
+}
+/* a标签为行内元素,应用大小需要转换为块元素 */
+.J_event a{
+    display: block;
+    height: 80px;
+    /* 广告使用背景图片 不重复*/
+    background: url(../image/top.jpg) no-repeat;
+    /* 关闭图标, 子绝父相 */
+    position: relative;
+}
+/* 顶部广告 关闭图标样式 */
+.J_event a i{
+    width: 20px;
+    height: 20px;
+    /* background-color: pink; */
+    /* 定位到右上角 (position可以使行内元素转换为块级元素)*/
+    position: absolute;
+    right: 0;
+    top: 5px;
+    /* 声明使用图标字体 */
+    font-family: "icomoon";
+    font-style: normal;
+    /* 图标水平、竖直居中 */
+    text-align: center;
+    line-height: 20px;
+    color: #7a7a7a;
+    /* 设置半透明背景 */
+    background: rgba(0, 0, 0, .4);
+}
+/* 2.顶部导航栏 */
+.shortcut{
+    height: 30px;
+    background-color: #e3e4e5;
+    border-bottom: 1px solid #dddddd;
+    color: #9d9d9d;
+    font-size: 12px;
+    /* 设置垂直居中 */
+    line-height: 30px;
+}
+.shortcut a{
+    color: #9d9d9d;
+    font-size: 12px;
+    /* 去掉链接下划线 */
+    text-decoration: none;
+}
+.shortcut a:hover{
+    color: #c81623;
+}
+.position{
+    font-family: "icomoon";
+    font-style: normal;
+    font-size: 14px;
+    color: #f10215;
+}
+.shortcut .fl li{
+    /* 留出logo位置 */
+    margin-left: 200px;
+    /* 防止挤占下层元素空间,设置固定高度 */
+    height: 30px;
+    overflow: hidden;
+}
+.shortcut .fr li{
+    float: left;
+}
+.spacer{
+    /* 导航栏竖线分栏 */
+    /* 1px宽 10px高的盒子,带背景色 */
+    width: 1px;
+    height: 10px;
+    background-color: #ccc;
+    /* 距上、左、右各10px */
+    margin: 10px 10px 0;
+}
+.dropdown{
+    /* 导航含有下拉箭头图标,用padding留空 */
+    padding-right: 15px;
+    /* 子绝父相 */
+    position: relative;
+}
+.dropdown i{
+    font-family: "icomoon";
+    font-size: 16px;
+    /* 使用定位 */
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
+.qc-code{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    /* 防止影响父级元素,使用定位,脱标 */
+    position: absolute;
+    left: -8px;
+    top: 35px;
+}
+/* 顶部 end */
+/* header start */
+.header{
+    height: 140px;
+}
+.inner{
+    /* 子绝父相 */
+    position: relative;
+    height: 140px;
+    /* background-color: pink; */
+}
+.logo{
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 190px;
+    height: 170px;
+    /* background-color: purple; */
+    box-shadow: 0 -12px 10px rgba(0, 0, 0, .2);
+}
+.logo a{
+    /* 行内元素转换为块元素,使整个图片可以点击链接 */
+    display: block;
+    width: 190px;
+    height: 170px;
+    background: url(../image/logo.gif) no-repeat;
+    /* 去掉标签里边的字 */
+    text-indent: -999px;
+    overflow: hidden;
+}
+.search{
+    position: absolute;
+    left: 320px;
+    top: 25px;
+    width: 550px;
+    height: 35px;
+    /* background-color: blue; */
+}
+.search input{
+    /* 去掉和搜索按钮之间行内块自身的缝隙 */
+    float: left;
+    width: 493px;
+    height: 33px;
+    /* 输入文字起始位置不要紧贴边框 !注意:width要减去padding值*/
+    padding-left: 5px;
+    color: #989898;
+    border: 1px solid #f10215;
+    /* 取消蓝色边框 */
+    outline: none;
+}
+.search button{
+    /* 去掉和搜索框之间行内块自身的缝隙 */
+    float: left;
+    width: 50px;
+    height: 35px;
+    background-color: #f10215;
+    /* 手型 */
+    cursor: pointer;
+    outline: none;
+}
+.search button i{
+    font-family: "icomoon";
+    font-style: normal;
+    font-size: 22px;
+    color: #fff;
+}
+.search em{
+    /* 子绝父绝 */
+    position: absolute;
+    top: 10px;
+    right: 65px;
+    width: 19px;
+    height: 15px;
+    /* background-color: #ccc; */
+    background: url(../image/sprite-search.png) no-repeat;
+    /* 手型 */
+    cursor: pointer;
+}
+.search em:hover{
+    background-position: -30px 0;
+}
+.hotwords{
+    position: absolute;
+    top: 70px;
+    left: 320px;
+}
+.hotwords a{
+    font-size: 12px;
+    color: #ccc;
+}
+.hotwords a:hover{
+    color: #f10215;
+}
+.cart{
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    width: 188px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.cart a{
+    font-size: 14px;
+    color: #f10215;
+}
+.cart i{
+    font-family: "icomoon";
+    font-style: normal;
+    color: #f10215;
+    margin-right: 3px;
+}
+.cart s{
+    position: absolute;
+    top: 5px;
+    left: 144px;
+    height: 16px;
+    padding: 0 3px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    /* 去掉删除线 */
+    text-decoration: none;
+    background-color: #f10215;
+    /* 随着位数变化 */
+    border-radius: 7px;
+}
+.computer{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.navitems{
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+}
+.navitems ul{
+    float: left;
+}
+.navitems ul li{
+    float: left;
+    margin-left: 20px;
+}
+.navitems li a{
+    height: 40px;
+    font-size: 16px;
+    color: #555a5f;
+    font-weight: 700;
+    line-height: 40px;
+    display: block;
+}
+.navitems li a:hover{
+    color: #f10215;
+}
+.navitems .spacer{
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 0;
+}
+/* header end */
+/* footer start */
+.footer{
+    height: 560px;
+    background-color: #eaeaea;
+}
+.footer-service{
+    /* 不给高，子元素有高，撑开父元素 */
+    border-bottom: 1px solid #dedede;
+}
+/* 多快好省 */
+.service-inner{
+    /* 不给定高，用padding撑开 实现居中显示*/
+    /* height: 100px; */
+    padding: 30px 0;
+    /* background-color: pink; */
+}
+.service-inner li{
+    float: left;
+    width: 297px;
+    height: 42px;
+    /* background-color: blue; */
+}
+.service-unit{ 
+    position: relative;
+    width: 225px;
+    height: 42px;
+    margin: 0 auto;
+    /* background-color: #fff; */
+}
+.service-unit h5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 42px;
+    text-indent: -999px;
+    /* background-color: #000; */
+    background: url(../image/sprite.footer.png) no-repeat;
+    background-position: 0 -192px;
+    overflow: hidden;
+}
+.service-unit p{
+    margin-left: 45px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 42px;
+}
+.service-unit .kuai{
+    background-position: -41px -192px;
+}
+.service-unit .hao{
+     background-position: -82px -192px;
+}
+.service-unit .sheng{
+     background-position: -123px -192px;
+}
+/* 帮助模块 */
+.help{
+    height: 180px;
+    padding-top: 20px;
+    /* background-color: rgb(62, 176, 180); */
+    border-bottom: 1px solid #dedede;
+}
+.help dl{
+    float: left;
+    width: 195px;
+}
+.help dt{
+    height: 27px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+}
+.help dd{
+    height: 22px;
+}
+.help a{
+    font-size: 12px;
+    color: #727272;
+}
+.help a:hover{
+    color: #f10215;
+}
+.help .cover{
+    float: left;
+    width: 205px;
+    height: 150px;
+    /* background-color: rgb(78, 165, 236); */
+    background: url(../image/sprite.footer.png) no-repeat;
+}
+.cover dt{
+    text-align: center;
+}
+.cover .info{
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 175px;
+    height: 50px;
+    font-size: 12px;
+    color: #727272;
+    line-height: 18px;
+}
+.more{
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+/* 版权模块 */
+.copyright{
+    padding-top: 15px;
+    /* background-color: rgb(6, 116, 39); */
+}
+.links{
+    text-align: center;
+}
+.links a{
+    font-size: 12px;
+    color: #727272;
+}
+.links a:hover{
+    color: #c81623;
+}
+.links span{
+    margin: 0 8px;
+    font-size: 12px;
+    color: #d4cdcd;
+}
+.c-info, .c-info a{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    line-height: 22px;
+}
+.c-info a:hover{
+    color: #c81623;
+}
+.c-info span{
+    margin: 0 8px;
+    font-size: 12px;
+    color: #d4cdcd;
+}
+.mod-copyright{
+    margin-top: 25px;
+    text-align: center;
+}
+.mod-copyright a{
+    display: inline-block;
+    width: 103px;
+    height: 32px;
+    /* background-color: rgb(153, 39, 102); */
+    background: url(../image/sprite.footer.png) no-repeat;
+}
+.mod-copyright .ico1{
+    background-position: -205px -111px;
+}
+.mod-copyright .ico2{
+    background-position: -205px -74px;
+}
+.mod-copyright .ico3{
+    background-position: -205px -37px;
+}
+.mod-copyright .ico4{
+    background-position: -205px 0;
+}
+.mod-copyright .ico5{
+    background-position: 0 -155px;
+}
+/* footer end */

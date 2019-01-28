@@ -1,0 +1,314 @@
+/*
+ * @Author: liziguang 
+ * @Date: 2019-01-24 22:30:20 
+ * @Last Modified by: liziguang
+ * @Last Modified time: 2019-01-24 22:30:59
+ * @Description: 首页相关样式
+ */
+.main{
+    /* 子绝父相,ad */
+    position: relative;
+    height: auto;
+    /* background-color: rgb(41, 118, 190); */
+}
+.jd-inner{
+    /* 定位的等级最高, 防止ad定位压到版心,同时使用定位，并增加 z-index 数值 */
+    position: relative;
+    z-index: 1;
+    height: 480px;
+    /* background-color: rgb(230, 74, 108); */
+}
+/* 广告部分 */
+.ad{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 480px;
+    /* 加上相对定位的盒子,自动转换为行内块==>根据内容多少定义宽度 */
+    width: 100%;
+    /* 超大背景,居中对齐 */
+    background: url(../image/bg.png) no-repeat top center;
+}
+.ad a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.jd-clo1{
+    float: left;
+    padding-top: 5px;
+    width: 190px;
+    height: 475px;
+    background-color: #6e6568;
+}
+.jd-clo1 li{
+    padding-left: 18px;
+    height: 26px;
+    line-height: 26px;
+}
+.jd-clo1 li:hover{
+    background-color: #999395;
+}
+.jd-clo1 li a{
+    color: #fff;
+    font-size: 14px;
+}
+.jd-clo1 li a:hover{
+    color: #c81623;
+}
+.jd-clo1 li span{
+    color: #fff;
+    font-size: 12px;
+}
+.jd-clo2{
+    float: left;
+    width: 790px;
+    height: 480px;
+    margin: 0 10px;
+    /* background-color: dodgerblue; */
+}
+.jd-clo2-hd{
+    position: relative;
+    margin-bottom: 10px;
+    height: 340px;
+    /* background-color: lightslategray; */
+}
+.arr-l, .arr-r{
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    margin-top: -30px;
+    text-align: center;
+    background: rgba(0, 0, 0, .3);
+}
+.arr-l:hover, .arr-r:hover{
+    background: rgba(0, 0, 0, .7);
+}
+.arr-l i, .arr-r i{
+    margin-top: 20px;
+    font-family: "icomoon";
+    font-style: normal;
+    font-size: 25px;
+    line-height: 60px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.arr-l{
+    left: 0;
+    border-radius: 0 30px 30px 0;
+}
+.arr-r{
+    right: 0;
+    border-radius: 30px 0 0 30px;
+}
+.jd-clo2-hd ol{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 178px;
+    height: 20px;
+    margin-left: -90px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+.jd-clo2-hd ol li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 4px 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.jd-clo2-hd ol .current{
+    background-color: #f10215;
+}
+.jd-clo2-bd div{
+    width: 390px;
+    height: 130px;
+    /* background-color: darkred; */
+}
+.jd-clo2-bd .img-l{
+    float: left;
+}
+.jd-clo2-bd .img-r{
+    float: right;
+}
+.jd-clo3{
+    float: left;
+    width: 190px;
+    height: 480px;
+    /* background-color: lightcoral; */
+}
+.jd-clo3 a{
+    font-size: 12px;
+    color: #747474;
+}
+.user{
+    height: 95px;
+    padding: 20px 15px 0;
+    /* background-color: blueviolet; */
+}
+.user-info{
+    /* 子绝父相 */
+    position: relative;
+    height: 40px;
+    /* 挤出文字显示区域 */
+    padding-left: 54px;
+    font-size: 12px;
+    color: #747474;
+    line-height: 22px;
+    /* background-color: aqua; */
+}
+.user-info a:hover{
+    color: #f10215;
+}
+.info-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 45px;
+    /* 只给a加了圆角,图片并没有加圆角,用 overflow: hidden 切去 */
+    border-radius: 50%;
+    overflow: hidden;
+}
+.info-img img{
+    width: 100%;
+    height: auto;
+}
+.user-profit{
+    margin-top: 14px;
+}
+.user-profit a{
+    /* 一行放多个 转换为行内块 */
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    margin-right: 3px;
+    color: #f10215;
+    text-align: center;
+    line-height: 20px;
+    border: 2px solid #f10215;
+}
+.user-profit a:hover{
+    color: #fff;
+    background-color: #f10215;
+}
+.news{
+    height: 149px;
+    padding: 5px 15px 0;
+    /* background-color: gold; */
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.tab-hd{
+    /* 子绝父相 */
+    position: relative;
+    padding: 3px 0;
+    border-bottom: 1px solid #ccc;
+}
+.tab-hd a{
+    margin: 0 4px;
+}
+.sale{
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
+}
+.news .more{
+    position: absolute;
+    top: 7px;
+    right: 0;
+}
+.line{
+    /* 滑动,只能用绝对定位 */
+    position: absolute;
+    bottom: -1px;
+    left: 2px;
+    width: 28px;
+    height: 2px;
+    background-color: #f10215;
+}
+.tab-bd{
+    margin-top: 10px;
+}
+.tab-bd li{
+    height: 23px;
+    text-overflow: ellipsis;
+    line-height: 23px;
+    overflow: hidden;
+}
+.service{
+    height: 209px;
+    /* background-color: dimgrey; */
+    /* 切除最外侧的子元素的1px边框 */
+    overflow: hidden;
+}
+.service ul{
+    /* 防止子元素每行四个放不下,提高宽度 */
+    width: 195px;
+}
+.service li{
+    float: left;
+    width: 47px;
+    height: 69px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /* background-color: blueviolet */
+}
+.service li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.service i{
+    display: block;
+    width: 24px;
+    height: 24px;
+    /* 居中 */
+    margin: 15px auto 8px;
+    background: url(../image/sprite_fs@1x.png) no-repeat;
+}
+.service p{
+    text-align: center;
+}
+.service .huafei{
+    background-position: 0 -88px;
+}
+.service .jipiao{
+    background-position: 0 -44px;
+}
+.service .jiudian{
+    background-position: -44px -88px;
+}
+.service .youxi{
+    background-position: -88px 0;
+}
+.service .qiye{
+    background-position: -88px -44px;
+}
+.service .jiayou{
+    background-position: 0 0;
+}
+.service .dianying{
+    background-position: -44px -44px;
+}
+.service .huoche{
+    background-position: -88px -88px;
+}
+.service .zhongchou{
+    background-position: -132px 0px;
+}
+.service .licai{
+    background-position: -132px -44px;
+}
+.service .lipin{
+    background-position: -132px -88px;
+}
+.service .baitiao{
+    background-position: -44px 0;
+}
+.items img{
+    width: 100%;
+    height: auto;
+}
