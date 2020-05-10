@@ -25,12 +25,6 @@ CSS的出现，拯救了混乱的HTML，当让更加拯救了我们web开发者�
 
 CSS的最大贡献就是：  让 HTML 从样式中解脱苦海，  实现了 HTML 专注去做 结构呈现。 而样式交给 CSS 后，你完全可以放心的早点洗洗睡了！
 
-而且。。。。。 CSS 做的很出色，如果JavaScript是网页的魔法师，那么CSS它是我们网页的美容师，不信，你看:
-
-<img src="media/baby.jpeg" />
-
-ps:  你跟Angelababy只差了一个妆容的距离
-
 有人说， 没有不漂亮的女人，只有不会打扮的女人。
 
 我想说， 没有不好看的网页，只有不会CSS的前端。
@@ -220,11 +214,11 @@ rel：定义当前文档与被链接文档之间的关系，在这里需要指�
         	color: red;
         }
         .orange {
-			color: orange;
+		color: orange;
         }
-		.green {
-			color: green;
-		}
+	.green {
+		color: green;
+	}
         </style>
     </head>
     <body>
@@ -268,14 +262,6 @@ rel：定义当前文档与被链接文档之间的关系，在这里需要指�
 <  人    class  = 刘德华     >      我们想要吧div  找到     div {}      .nav {}     
 
  
-
-
-
-
-
-
-
-
 
 ## id选择器
 
